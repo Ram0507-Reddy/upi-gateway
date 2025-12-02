@@ -25,6 +25,6 @@ services:
         fromService:
           type: web
           name: upi-gateway-server
-          property: url
+          property: host
       - key: VITE_DEMO_API_KEY
         sync: false

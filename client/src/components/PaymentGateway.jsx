@@ -21,7 +21,10 @@ const PaymentGateway = ({ amount, orderId, apiKey, merchantUpiId, merchantName, 
     useEffect(() => {
         const fetchPaymentDetails = async () => {
             try {
-                const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/create-payment`, {
+                const envUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+                const API_BASE = envUrl.startsWith('http') ? envUrl : `https://${envUrl}`;
+
+                const response = await fetch(`${API_BASE}/api/v1/create-payment`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
