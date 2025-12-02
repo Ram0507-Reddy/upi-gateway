@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, Shield, Code, ArrowRight, Terminal } from 'lucide-react';
+import KeyModal from './KeyModal';
 
 const LandingPage = () => {
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
+
     return (
         <div className="min-h-screen bg-black text-green-400 font-mono selection:bg-green-900 selection:text-white">
             {/* Navbar */}
@@ -39,7 +42,10 @@ const LandingPage = () => {
                         The developer-first gateway you've been waiting for.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-green-500 hover:bg-green-400 text-black font-bold py-4 px-8 rounded-sm text-lg transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                        <button
+                            onClick={() => setIsModalOpen(true)}
+                            className="bg-green-500 hover:bg-green-400 text-black font-bold py-4 px-8 rounded-sm text-lg transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)]"
+                        >
                             Get API Key
                         </button>
                         <Link to="/demo" className="border border-green-500/50 hover:border-green-400 hover:bg-green-500/10 text-green-400 py-4 px-8 rounded-sm text-lg transition-all">
@@ -145,6 +151,8 @@ const LandingPage = () => {
             <footer className="py-10 text-center text-gray-600 border-t border-green-900/30">
                 <p>© 2025 ZeroPay API. Built for Developers.</p>
             </footer>
+
+            <KeyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
     );
 };
