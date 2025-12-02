@@ -34,8 +34,8 @@ const DemoStore = () => {
             amount: totalAmount,
             orderId: orderId,
             apiKey: import.meta.env.VITE_DEMO_API_KEY || 'sk_test_1234567890',
-            merchantUpiId: 'test-merchant@oksbi',
-            merchantName: 'TechGadget Demo Store'
+            merchantUpiId: 'shriramreddyofficial0507@oksbi',
+            merchantName: 'ZeroPay Demo Store'
         });
 
         setIsCartOpen(false);

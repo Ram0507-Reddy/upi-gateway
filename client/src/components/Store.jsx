@@ -5,42 +5,42 @@ const PRODUCTS = [
     {
         id: 1,
         name: "Sony WH-1000XM5",
-        price: 24999,
+        price: 1,
         description: "Industry-leading noise canceling headphones with Auto NC Optimizer.",
         image: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&q=80&w=500"
     },
     {
         id: 2,
         name: "Keychron K2 Pro",
-        price: 8999,
+        price: 1,
         description: "Wireless mechanical keyboard with QMK/VIA support.",
         image: "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&q=80&w=500"
     },
     {
         id: 3,
         name: "Logitech MX Master 3S",
-        price: 9495,
+        price: 1,
         description: "Performance wireless mouse with 8K DPI tracking.",
         image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=500"
     },
     {
         id: 4,
         name: "Nothing Phone (2)",
-        price: 39999,
+        price: 1,
         description: "New Glyph Interface and 50 MP dual camera.",
         image: "https://images.unsplash.com/photo-1691434358786-291772921384?auto=format&fit=crop&q=80&w=500"
     },
     {
         id: 5,
         name: "Apple Watch Series 9",
-        price: 41900,
+        price: 1,
         description: "Smarter, brighter, and mightier. S9 SiP.",
         image: "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&q=80&w=500"
     },
     {
         id: 6,
         name: "Kindle Paperwhite",
-        price: 14999,
+        price: 1,
         description: "Now with a 6.8” display and adjustable warm light.",
         image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=500"
     }
