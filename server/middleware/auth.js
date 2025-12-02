@@ -3,9 +3,9 @@ dotenv.config();
 
 const auth = (req, res, next) => {
     const apiKey = req.header('x-api-key');
-    const validApiKey = process.env.API_KEY;
+    const allowedKeys = (process.env.API_KEY || '').split(',').map(key => key.trim()).filter(key => key);
 
-    if (!apiKey || apiKey !== validApiKey) {
+    if (!apiKey || !allowedKeys.includes(apiKey)) {
         return res.status(401).json({ success: false, message: 'Unauthorized: Invalid or missing API Key' });
     }
 
